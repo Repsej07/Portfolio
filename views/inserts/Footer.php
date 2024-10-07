@@ -40,7 +40,7 @@
             </div>
         </div>
         <div class="copyright">
-            <span>&copy; - 2024 Jesper</span>
+            <span style="padding-right: 5px;">©</span><span class="cr1">  - 2024 Jesper Meuzelaar</span>
         </div>
     </div>
 </body>

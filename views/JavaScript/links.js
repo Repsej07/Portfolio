@@ -7,3 +7,8 @@ function instaGramlink() {
 function linkedInlink() {
   window.open("https://www.linkedin.com/in/jesper-meuzelaar/");
 }
+function homelink(destination = "/") {
+window.location.href(destination);
+
+
+}

@@ -1,5 +1,9 @@
 body {
   margin: 0;
+  background-image: url(/views/images/backdrop.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: #010114;
 }
 
@@ -11,9 +15,6 @@ body {
 
   width: 100%;
   height: 8rem;
-  background-image: url(/views/images/image.png);
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 .logo-container {
   grid-area: logo;
@@ -21,6 +22,12 @@ body {
   justify-self: flex-start;
   padding-left: 1rem;
   margin: 0;
+  transition: 0.1s;
+}
+.logo-container:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+  cursor: pointer;
 }
 
 .fName-logo {
@@ -45,46 +52,120 @@ body {
   transition: 0.1s;
   padding-right: 1rem;
 }
-.menu:hover{
-transform: scale(1.2);
-transition: 0.2s;
-cursor: pointer;
-
-
+.menu:hover {
+  transform: scale(1.2);
+  transition: 0.2s;
+  cursor: pointer;
 }
 .main-footer {
   width: 100vw;
   display: grid;
   grid-template-areas:
-    "icons"
-    "copyright";
+    ". icons ."
+    ". copyright .";
   grid-template-rows: 50% 50%;
-  grid-template-columns: 100%;
+  grid-template-columns: 42.5% 15% 42.5%;
   padding-top: 1rem;
 }
-.icons-footer{
-grid-area: icons;
+.icons-footer {
+  grid-area: icons;
+  display: flex;
+  justify-content: space-evenly
+}
+.copyright {
+  grid-area: copyright;
+  color: #6E6E79;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}
+.cr1 {
+  font-family: Panton-Trial;
+  font-style: normal;
+}
+
+.icon {
+  padding-left: 0.3rem;
+  transition: 0.3s;
+}
+.icon:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+  cursor: pointer;
+}
+.nav-bar{
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-areas: 
+  "portfolio"
+  "about"
+  "contact"
+  "links";
+  grid-template-columns: 100%;
+  grid-template-rows: 25% 25% 25% 25%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+.nav-item-1{
+  grid-area: portfolio;
+  align-self: center;
+  justify-self: center;
+  text-decoration: none;
+  color: #6E6E79;
+  transition: 0.3s;
+}
+.nav-item-1:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+  cursor: pointer;
+  color: white;
+}
+.nav-item-2{
+  grid-area: about;
+  align-self: center;
+  justify-self: center;
+  text-decoration: none;
+  color: #6E6E79;
+  transition: 0.3s;
+}
+.nav-item-2:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+  cursor: pointer;
+  color: white;
+}
+.nav-item-3{
+  grid-area: contact;
+  align-self: center;
+  justify-self: center;
+  text-decoration: none;
+  color: #6E6E79;
+  transition: 0.3s;
+}
+.nav-item-3:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+  cursor: pointer;
+  color: white;
+}
+.icons-header{
+grid-area: links;
+align-self: center;
 justify-self: center;
 display: flex;
-justify-items: space-between;
+justify-content: space-between;
 
 }
-.copyright{
-grid-area: copyright;
-justify-self: center;
-align-self: center;
-color: white;
-font-family: Arial, Helvetica, sans-serif;
-padding-top: 1rem;
+.icon-header{
+  padding-left: 1rem;
+  transition: 0.3s;
 }
-
-
-.icon{
-padding-left: 0.3rem;
-transition: 0.3s;
-}
-.icon:hover{
-transform: scale(1.2);
-transition: 0.5s;
-cursor: pointer;
+.icon-header:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+  cursor: pointer;
 }
