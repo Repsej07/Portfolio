@@ -16,9 +16,9 @@
             <span class="fName-logo">Jesper</span>
             <span class="lName-logo">Meuzelaar</span>
         </div>
-        <div onclick="opennav()"class="menu">
-            <svg  width="30" height="30" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path id="menu" d="M10 40H70M10 20H70M10 60H70"  />
+        <div onclick="nav()"class="menu">
+            <svg  width="30" height="30" viewBox="0 0 80 80" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <path id="menu" d="M10 40H70M10 20H70M10 60H70" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
         </div>
         
