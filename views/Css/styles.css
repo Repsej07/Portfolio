@@ -45,3 +45,31 @@ body {
   transition: 1s;
   padding-right: 1rem;
 }
+.main-footer {
+  width: 100vw;
+  display: grid;
+  grid-template-areas:
+    "icons"
+    "copyright";
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 100%;
+  padding-top: 1rem;
+}
+.icons-footer{
+grid-area: icons;
+justify-self: center;
+
+}
+.copyright{
+grid-area: copyright;
+justify-self: center;
+align-self: center;
+color: white;
+font-family: panton-trial;
+padding-top: 1rem;
+}
+
+.copyright-icon{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
