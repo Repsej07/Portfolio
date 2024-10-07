@@ -1,2 +1,2 @@
 <?php 
-require "./views/Layout/Header.php";
+require "./views/inserts/Header.php";
