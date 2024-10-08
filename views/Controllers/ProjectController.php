@@ -1,5 +1,5 @@
 <?php
-class ProjectController extends controller
+class ProjectController extends BaseController
 {
     
 }

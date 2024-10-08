@@ -1,6 +1,6 @@
 <?php
 
-class controller
+class BaseController
 {
     public function index($destination)
     {
