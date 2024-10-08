@@ -1,2 +1,2 @@
 <?php 
-require_once("404.view.php");
+require_once("home.view.php");
