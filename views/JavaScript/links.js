@@ -9,6 +9,7 @@ function linkedInlink() {
 }
 function homelink(destination = "/") {
 window.location.href(destination);
-
-
 }
+contact="/contact";
+function contactLink() {
+  window.location.href(contact);}
