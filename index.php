@@ -1,3 +1,2 @@
 <?php 
-require "./views/inserts/Header.php";
-require "./views/inserts/Footer.php";
+require_once("404.view.php");
