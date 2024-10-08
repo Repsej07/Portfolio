@@ -12,7 +12,7 @@
 
     <div class="main-header">
         <div class="backdrop-header"></div>
-        <div class="logo-container" onclick="homelink()">
+        <div class="logo-container" onclick="homeLink('/')">
             <span class="fName-logo">Jesper</span>
             <span class="lName-logo">Meuzelaar</span>
         </div>
@@ -25,9 +25,9 @@
     </div>
     <div class="overlay" id="overlay">
         <div id="nav-bar" class="nav-bar">
-            <a class="nav-item-1" href="views/main.view.php">Portfolio</a>
-            <a class="nav-item-2" href="views/about.view.php">About</a>
-            <div class="nav-item-3" onclick="contactLink()">Contact</div>
+            <a class="nav-item-1" href="/Home">Portfolio</a>
+            <a class="nav-item-2" href="/About">About</a>
+            <a class="nav-item-3" href="/Contact">Contact</a>
             <div class="icons-header">
                 <div onclick="gitHublink()" class="icon-header">
                     <svg width="60" height="60" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -1,10 +1,8 @@
 <?php
-
 class BaseController
 {
-    public function index($destination)
+    public static function redirect($path = 'Home')
     {
-        include("/views/$destination.view.php");
+        require "./views/$path.view.php";
     }
-    
 }

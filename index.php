@@ -1,2 +1,2 @@
 <?php 
-require_once("./views/router/router.php");
+require_once("./views/Router/Router.php");

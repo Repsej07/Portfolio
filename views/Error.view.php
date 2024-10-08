@@ -1,5 +1,4 @@
 <?php
-require("./views/Controllers/404Controller.php");
 require_once("views/inserts/Header.php");
 echo "<h1>404 Page was not found!</h1>";
 ?>
