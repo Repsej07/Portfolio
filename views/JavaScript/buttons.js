@@ -1,11 +1,19 @@
+function openNav() {
+    document.getElementById("overlay").style.height = "100%";
+  }
+  
+  function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+  }
 function nav() {
-  if (document.getElementById("overlay").style.height == '100%') {
+
+  if (document.getElementById("overlay").style.height == "100%") {
     document.getElementById("overlay").style.height = 0;
     document.getElementById("nav-bar").style.display = "none";
     document
       .getElementById("menu")
       .setAttribute("d", "M10 40H70M10 20H70M10 60H70");
-  } else if (document.getElementById("overlay").style.height == '0%') {
+  } else if (document.getElementById("overlay").style.height == 0) {
       document.getElementById("nav-bar").style.display = "grid";
       document.getElementById("overlay").style.height = "100%";
       document

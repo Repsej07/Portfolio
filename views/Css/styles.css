@@ -96,9 +96,12 @@ body {
 }
 .overlay{
 width: 100%;
-height: 0%;
+height: 0px;
 transition: 0.5s;
-overflow-x: hidden; 
+z-index: 1;
+overflow-x: hidden;
+position: fixed; 
+background-image: url(/views/images/backdrop.png);
 
 }
 .nav-bar{
