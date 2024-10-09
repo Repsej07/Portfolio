@@ -42,7 +42,7 @@ $Contact = "views/assets/blocks/Contact-block.svg";
 
     </div>
     <div class="block-grid">
-        <div class="block-1" onclick="block1('/project')"style="background-image: url(<?php echo $Block1 ?>);"></div>
+        <div class="block-1" onclick="block1('/project/sony')"style="background-image: url(<?php echo $Block1 ?>);"></div>
         <div class="block-2" style="background-image: url(<?php echo $Block2 ?>);"></div>
         <div class="block-3" style="background-image: url(<?php echo $Block3 ?>)"></div>
         <div class="block-4" style="background-image: url(<?php echo $Block4 ?>)"></div>
