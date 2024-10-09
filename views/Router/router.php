@@ -31,13 +31,12 @@ class Router
 
     private static function processUri(): array
     {
-        $uriData = self::getUri();
-        $cntrluri = $uriData[1] ?? '';
+        $cntrluri = self::getUri()[1] ?? '';
         $controller = !empty($cntrluri) ?
             './controllers/' . ucfirst($cntrluri) . 'Controller' :
-            './controllers/BaseController';
+            './controllers/HomeController';
         $method = 'redirect';
-        $args = !empty($uriData[2]) ? $uriData[2] : "home";
+        $args = !empty($cntrluri) ? $cntrluri : "home";
 
         return [
             'controller' => $controller,
