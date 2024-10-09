@@ -5,16 +5,10 @@ include './views/controllers/ContactController.php';
 include './views/controllers/AboutController.php';
 include './views/Controllers/HomeController.php';
 include './views/Controllers/ErrorController.php';
-Router::route();
 
 //BEDANKT FLORIS VOOR HULP MET DE ROUTER
 class Router
 {
-    public static function route() : void
-    {
-        self::content();
-    }
-
     public static function content() : void
     {   
         $uri = self::processUri(); 
@@ -29,7 +23,7 @@ class Router
         }
     }
 
-    private static function getUri()
+    private static function getUri(): array
     {
         $path_info = $_SERVER['PATH_INFO'] ?? '/';
         return explode('/', $path_info);

@@ -10,3 +10,6 @@ function linkedInlink() {
 function homeLink(destination) {
   window.location.href = destination;
 }
+function block1(destination) {
+  window.location.href = destination;
+}

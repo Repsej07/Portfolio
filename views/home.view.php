@@ -14,6 +14,7 @@ $Block2 = "views/assets/blocks/Mediamarkt-block.png";
 $Block3 = "views/assets/blocks/Code-block.png";
 $Block4 = "views/assets/blocks/BMD-block.png";
 $Contact = "views/assets/blocks/Contact-block.svg";
+// $Block1.href = "/project";
 ?>
 <html>
 
@@ -41,18 +42,18 @@ $Contact = "views/assets/blocks/Contact-block.svg";
 
     </div>
     <div class="block-grid">
-        <div class="block-1" style="background-image: url(<?php echo $Block1 ?>);"></div>
+        <div class="block-1" onclick="block1('/project')"style="background-image: url(<?php echo $Block1 ?>);"></div>
         <div class="block-2" style="background-image: url(<?php echo $Block2 ?>);"></div>
         <div class="block-3" style="background-image: url(<?php echo $Block3 ?>)"></div>
         <div class="block-4" style="background-image: url(<?php echo $Block4 ?>)"></div>
         <div class="contact-block" style="background-image:url(<?php echo $Contact ?>)">
             <p class="contact-block-item">Curious?</p>
-           
+
             <a class="contact-block-item-2" href="/contact">Contact</a>
         </div>
     </div>
 </body>
 <?php
-include "./views/inserts/footer.php";?>
+include "./views/inserts/footer.php"; ?>
 
 </html>

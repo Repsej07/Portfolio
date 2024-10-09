@@ -244,6 +244,7 @@ body {
 }
 .block-grid {
   display: grid;
+  margin-top: 20px;
   grid-template:
     "block-1  block-2"
     "block-3  block-4"
@@ -330,4 +331,10 @@ cursor: pointer;
   color: white;
   transition: 0.5s;
   cursor: pointer;
+}
+
+.project-sub-image{
+height: 30vh;
+width: 80vw;
+
 }
