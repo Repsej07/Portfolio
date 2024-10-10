@@ -2,7 +2,7 @@
 include("views/inserts/Header.php");
 
 $sub_image = "views/assets/project-sub-image.svg";
-$path_info = isset($path_info) ? $path_info : 'No Path Info'; // Provide a default path info if not set
+$path_info = isset($path_info) ? $path_info : '';
 
 ?>
 
