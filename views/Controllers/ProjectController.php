@@ -16,3 +16,5 @@ class ProjectController
         return $_SERVER['QUERY_STRING'] ?? '/'; // Get the path info from the server variable
     }
 }
+//we receive a querry string, and we need to extract the "chosen project" for example sony is 1
+//we then need to pass the project to the view with data from the db
