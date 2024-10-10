@@ -17,7 +17,14 @@ class Router
             $controller = $class[2];
             $method = $uri['method'];
             $args = $uri['args'];
-            $args ? $controller::{$method}($args) : $controller::{$method}();
+            // $things = $uri['arguments'];
+            if ($args) {
+                $controller::{$method}($args);
+            } 
+
+            else {
+                $controller::{$method}();
+            }
         } else {
             ErrorController::redirect('error');
         }
@@ -37,11 +44,13 @@ class Router
             './controllers/HomeController';
         $method = 'redirect';
         $args = !empty($cntrluri) ? $cntrluri : "home";
+        $arguments = self::getUri()[2] ?? '';
 
         return [
             'controller' => $controller,
             'method' => $method,
-            'args' => $args
+            'args' => $args,
+            'arguments' => $arguments
         ];
     }
 }

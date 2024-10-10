@@ -1,6 +1,9 @@
 <?php
 include("views/inserts/Header.php");
+
 $sub_image = "views/assets/project-sub-image.svg";
+$path_info = isset($path_info) ? $path_info : 'No Path Info'; // Provide a default path info if not set
+
 ?>
 
 
@@ -9,7 +12,7 @@ $sub_image = "views/assets/project-sub-image.svg";
 </head>
 <div class="project-main-container">
      <img class="project-sub-image" src="<?= $sub_image?>" alt=""> 
-     <?php var_dump($_SERVER)?>
+     <h1><?php echo htmlspecialchars($path_info); ?></h1>
 </div>
 
 </html>
