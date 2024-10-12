@@ -6,9 +6,11 @@ class ProjectController extends BaseController
     {  
         $controller = new self();
         $path_info = $controller->obtainmeth();
+
         $loser1 = $controller->projectchoice($path_info);
-        // $path = $controller->obtainmeth($path);
-        echo $path;
+        if ($loser1 == "Error") {
+            $path = 'error';
+        } 
         require './views/' . $path . '.view.php';
         return $loser1;
         
@@ -18,10 +20,10 @@ class ProjectController extends BaseController
     {
         if (isset($_SERVER['QUERY_STRING'])) {
             $path_info = $_SERVER['QUERY_STRING'];
-        } else {
-            $this->redirect('Error');
-            return;
-        }
+        } //else {
+        //     $path = 'error';
+        //     exit;
+        // }
         if (isset($path_info)) {
             return $path_info;
         }
@@ -35,7 +37,7 @@ class ProjectController extends BaseController
                 $loser1 = "Project 1 selected";
                 break;
             default:
-                $loser1 = "No project selected";
+                $loser1 = "Error";
                 break;
         }
         return $loser1;
