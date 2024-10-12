@@ -1,3 +1,8 @@
+<?php
+$first_name = "Jesper";
+$last_name = "Meuzelaar";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,8 +56,8 @@
     <div class="main-header">
         <div class="backdrop-header"></div>
         <div class="logo-container" onclick="homeLink('/')">
-            <span class="fName-logo">Jesper</span>
-            <span class="lName-logo">Meuzelaar</span>
+            <span class="fName-logo"><?=$first_name?></span>
+            <span class="lName-logo"><?=$last_name?></span>
         </div>
         <div id="button1" onclick="Click()" class="menu">
             <svg width="30" height="30" viewBox="0 0 80 80" fill="white" xmlns="http://www.w3.org/2000/svg">
