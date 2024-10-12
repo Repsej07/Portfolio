@@ -6,13 +6,15 @@ class ProjectController extends BaseController
     {  
         $controller = new self();
         $path_info = $controller->obtainmeth();
-
         $loser1 = $controller->projectchoice($path_info);
+        $sub_image = $controller->projectchoice($path_info);
+
         if ($loser1 == "Error") {
             $path = 'error';
         } 
         require './views/' . $path . '.view.php';
-        return $loser1;
+        return $sub_image;
+
         
     }
 
@@ -30,11 +32,16 @@ class ProjectController extends BaseController
    
     }
 
+    public static function project1()
+    {
+        $sub_image = "views/assets/Project-assets/Main-photo-Mediamarkt.png";
+        return $sub_image;
+    }
     public function projectchoice($path_info)
     {
         switch ($path_info) {
             case '1':
-                $loser1 = "Project 1 selected";
+                self::project1();
                 break;
             default:
                 $loser1 = "Error";
@@ -42,4 +49,5 @@ class ProjectController extends BaseController
         }
         return $loser1;
     }
+    
 }
