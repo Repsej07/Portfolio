@@ -17,7 +17,7 @@ function closeNav() {
   document.querySelector("body").style.overflow = "auto";
   document.getElementById("overlay").classList.add("hidden");
 }
-function Click() {
+function Menu() {
   if (document.getElementById("overlay").style.height == "100%") {
     closeNav();
   } else {
