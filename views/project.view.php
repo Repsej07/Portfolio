@@ -17,7 +17,7 @@ include("views/inserts/Header.php");
     </article>
     <h1><?=htmlspecialchars($project_assets[4])?></h1>
     <article>
-    <?=htmlspecialchars($project_assets[5])?>
+    <?=htmlspecialchars($project_assets[5])?> 
     </article>
     <h1><?=htmlspecialchars($project_assets[6])?></h1>
     <article>

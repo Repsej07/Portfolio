@@ -13,11 +13,11 @@ class Router
     {   
         $uri = self::processUri(); 
         $class = explode('/', $uri['controller']);
+        var_dump($class);
         if (class_exists($class[2])) {
             $controller = $class[2];
             $method = $uri['method'];
             $args = $uri['args'];
-            // $things = $uri['arguments'];
             if ($args) {
                 $controller::{$method}($args);
             } 
@@ -43,14 +43,23 @@ class Router
             './controllers/' . ucfirst($cntrluri) . 'Controller' :
             './controllers/HomeController';
         $method = 'redirect';
-        $args = !empty($cntrluri) ? $cntrluri : "home";
-        $arguments = self::getUri()[2] ?? '';
+        
+        $num_args = count(self::getUri());
+        $argsParts = [];
+        for ($i = 2; $i < $num_args; $i++) {
+            $argsParts[] = self::getUri()[$i];
+        }
+
+        $args = !empty($argsParts) ?
+        $argsParts :[];
+        // var_dump(value: $args);
+
+
 
         return [
             'controller' => $controller,
             'method' => $method,
             'args' => $args,
-            'arguments' => $arguments
         ];
     }
 }
