@@ -42,10 +42,10 @@ $Contact = "views/assets/Contact-block.svg";
 
     </div>
     <div class="block-grid">
-        <div class="block-1" onclick="Link('/project?1')"style="background-image: url(<?php echo $Block1 ?>);"></div>
-        <div class="block-2" onclick="Link('/project?2')"style="background-image: url(<?php echo $Block2 ?>);"></div>
-        <div class="block-3" onclick="Link('/project?3')"    style="background-image: url(<?php echo $Block3 ?>)"></div>
-        <div class="block-4" onclick="Link('/project?4')"   style="background-image: url(<?php echo $Block4 ?>)"></div>
+        <div class="block-1" onclick="Link('/project/sony')"style="background-image: url(<?php echo $Block1 ?>);"></div>
+        <div class="block-2" onclick="Link('/project/mediamarkt')"style="background-image: url(<?php echo $Block2 ?>);"></div>
+        <div class="block-3" onclick="Link('/project/code')"    style="background-image: url(<?php echo $Block3 ?>)"></div>
+        <div class="block-4" onclick="Link('/project/bmd')"   style="background-image: url(<?php echo $Block4 ?>)"></div>
         <div class="contact-block" style="background-image:url(<?php echo $Contact ?>)">
             <p class="contact-block-item">Curious?</p>
 

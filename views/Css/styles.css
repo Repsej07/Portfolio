@@ -221,8 +221,8 @@ body {
   margin-bottom: 0;
 }
 .main-image-img {
-  width: 100%; /* Adjust as necessary */
-  height: 60vw; /* Adjust as necessary */
+  width: auto; /* Adjust as necessary */
+  height: 40vw; /* Adjust as necessary */
   justify-self: center; /* Change from center to end */
   align-self: center; /* Keep centered vertically */
 }
@@ -245,25 +245,24 @@ body {
 }
 .block-grid {
   display: grid;
-  margin-top: 20px;
   grid-template:
     "block-1  block-2"
     "block-3  block-4"
     "block-5  block-5";
-  grid-template-columns: 50%  50%;
-  grid-template-rows: 66vh 66vh 66vh;
-  height: 200vh;
+  grid-template-columns: 30%  30%;
+  grid-template-rows: 50vh 50vh 50vh;
+  height: 150vh;
   width: auto;
   padding: 0;
-
+justify-content: center;
 
  
 }
 .block-1,.block-2,.block-3,.block-4,.block-5,.contact-block {
   background-repeat: no-repeat;
   background-size: contain;
-  width: 30vw;
-  height: 30vw;
+  width: 20vw;
+  height: 20vw;
   transition: 0.5s;
 }
 .block-1:hover,.block-2:hover,.block-3:hover,.block-4:hover,.block-5:hover,.contact-block:hover{
@@ -281,7 +280,7 @@ cursor: pointer;
 .block-2 {
   grid-area: block-2;
   justify-self: center;
-  align-self: start;
+  align-self: end;
 
 }
 .block-3 {
@@ -293,7 +292,7 @@ cursor: pointer;
 .block-4 {
   grid-area: block-4;
   justify-self: center;
-  align-self: start;
+  align-self: end;
 
 }
 .contact-block {
@@ -302,8 +301,8 @@ cursor: pointer;
   flex-direction: column;
   justify-self: center;
   align-self: center;
-  width: 80vw;
-  height: 30vw;
+  width: 55vw;
+  height: 22vw;
   border-radius: 50px;
   justify-content: center;
   align-items: center;
@@ -346,8 +345,30 @@ width: 80vw;
 
 }
 .project-main-image{
-  height: 90vh;
-  width: 80vw;
+  height: 60vh;
+  width: 55vw;
   justify-self: center;
   align-content: center;
+}
+.header-project{
+  height: auto;
+  width: 55vw;
+  color: white;
+  font-size: 2rem;
+  font-family: panton-trial;
+  justify-self: center;
+  align-content: center;
+  padding: 1vh;
+}
+.article-project{
+  color: white;
+  word-wrap: break-word;
+  font-size: 1rem;
+  font-family: panton-trial;
+  justify-self: center;
+  align-content: center;
+  padding: 1vh;
+  width: 55vw;
+  height: auto;
+
 }

@@ -64,8 +64,10 @@ class ProjectController extends BaseController
 
     public static function projectchoice($args)
     {
+
         switch ($args[0]) {
-            case 'sony' || 'Sony':
+            case 'sony':
+            case 'Sony':
                 return self::Sony();
             default:
                 return null;
