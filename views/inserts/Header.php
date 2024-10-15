@@ -7,13 +7,15 @@ $last_name = "Meuzelaar";
 <html lang="en">
 
 <head>
+    <base href="/">
     <link rel="stylesheet" href="views/Css/styles.css">
     <script src="/views/JavaScript/links.js"></script>
     <script src="views/JavaScript/buttons.js"></script>
 
 </head>
 
-<body>    <div class="overlay" id="overlay">
+<body>
+    <div class="overlay" id="overlay">
         <div id="nav-bar" class="nav-bar">
             <a class="nav-item-1" href="/Home">Portfolio</a>
             <a class="nav-item-2" href="/About">About</a>
@@ -56,8 +58,8 @@ $last_name = "Meuzelaar";
     <div class="main-header">
         <div class="backdrop-header"></div>
         <div class="logo-container" onclick="Link('/')">
-            <span class="fName-logo"><?=$first_name?></span>
-            <span class="lName-logo"><?=$last_name?></span>
+            <span class="fName-logo"><?= $first_name ?></span>
+            <span class="lName-logo"><?= $last_name ?></span>
         </div>
         <div id="button1" onclick="Menu()" class="menu">
             <svg width="30" height="30" viewBox="0 0 80 80" fill="white" xmlns="http://www.w3.org/2000/svg">

@@ -2,8 +2,9 @@
 class BaseController
 {
 
-    public static function redirect($path = 'Home')
+    public static function redirect($args, $path = 'home')
     {
+
         require_once './views/controllers/'.$path.'php';
     }
 }

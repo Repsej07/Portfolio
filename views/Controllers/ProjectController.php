@@ -2,37 +2,22 @@
 
 class ProjectController extends BaseController
 {
-    
-    public static function redirect($path = 'Project', ...$args)
-    {   
+
+    public static function redirect($args = null, $path = 'project')
+    {
+        $args = $args ?? 'error';
         $controller = new self();
-        $path_info = $controller->obtainmeth();
-        $loser1 = $controller->projectchoice($path_info);
-        $project_assets = $controller->projectchoice($path_info);
-        if ($loser1 == "Error") {
-            $path = 'error';
+        $project_assets = $controller->projectchoice($args);
+        if ($project_assets === null) {
+            $path = 'error'; 
         }
         require './views/' . $path . '.view.php';
         return $project_assets;
     }
-    
-    
 
-    public function obtainmeth()
+    public static function Sony()
     {
-        if (isset($_SERVER['QUERY_STRING'])) {
-            $path_info = $_SERVER['QUERY_STRING'];
-        }
-        if (isset($path_info)) {
-            return $path_info;
-        }
-        $args = [];
-        var_dump($args);
-    }
-
-    public static function project1()
-    {
-        $content1_querry='';
+        $content1_querry = '';
         $sub_image = "views/assets/Jesper/blocks/Project.1/project.1.sub-image.sony.svg";
         $main_pr_image = "views/assets/Jesper/blocks/Project.1/Project.1.main.image.png";
         $title_project = "My role in Sony";
@@ -46,17 +31,14 @@ class ProjectController extends BaseController
         //database variables 
         return [$sub_image, $main_pr_image, $title_project, $content1_project, $sub_header_project_1, $content2_project, $sub_header_project_2, $content3_project, $sub_header_project_3, $content4_project];
     }
-    public function projectchoice($path_info)
+
+    public static function projectchoice($args)
     {
-        $loser1 = "";
-        switch ($path_info) {
-            case 'sony':
-                $project_assets = self::project1();
-                return $project_assets;
+        switch ($args[0]) {
+            case 'sony'||'Sony':
+                return self::Sony();
             default:
-                $loser1 = "Error";
-                break;
+                return null;
         }
-        return $loser1;
     }
 }

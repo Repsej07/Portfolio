@@ -13,7 +13,6 @@ class Router
     {   
         $uri = self::processUri(); 
         $class = explode('/', $uri['controller']);
-        var_dump($class);
         if (class_exists($class[2])) {
             $controller = $class[2];
             $method = $uri['method'];
@@ -52,7 +51,6 @@ class Router
 
         $args = !empty($argsParts) ?
         $argsParts :[];
-        // var_dump(value: $args);
 
 
 
