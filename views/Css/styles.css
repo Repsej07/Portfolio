@@ -333,9 +333,21 @@ cursor: pointer;
   transition: 0.5s;
   cursor: pointer;
 }
+.project-main-container{
+display: grid;
+
+}
 
 .project-sub-image{
+justify-self: center;
+align-content: center;
 height: 30vh;
 width: 80vw;
 
+}
+.project-main-image{
+  height: 90vh;
+  width: 80vw;
+  justify-self: center;
+  align-content: center;
 }
