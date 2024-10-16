@@ -1,3 +1,9 @@
+<?php 
+require_once 'views/inserts/Header.php';
+?>
 <html>
-    hi
+   
 </html>
+<?php
+require_once 'views/inserts/Footer.php';
+?>

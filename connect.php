@@ -2,12 +2,10 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "Users";
+$dbname = "images";
 
-// Create connection
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    // set the PDO error mode to exception
       } catch(PDOException $e) {
   }
 

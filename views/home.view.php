@@ -1,6 +1,6 @@
 <?php
 include "./views/inserts/header.php";
-$person_image = "views/assets/Jesper/Home.main.image.png";
+$home_image = "views/assets/Jesper/Home.main.image.png";
 $title = "Home";
 $Skill1 = "HTML5";
 $Skill2 = "CSS";
@@ -26,7 +26,7 @@ $Contact = "views/assets/Contact-block.svg";
     <div class="home-container">
         <h1 class="title">Creating and selling Content</h1>
         <div class="main-image">
-            <img class="main-image-img" src="<?=$person_image?>" alt="main-image">
+            <img class="main-image-img" src="<?=$home_image?>" alt="main-image">
         </div>
         <div class="skill-bar">
             <span class="skill1"><?php echo $Skill1 ?></span>
