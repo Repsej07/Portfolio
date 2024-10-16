@@ -1,4 +1,4 @@
 <?php
 session_start();
-require_once("./views/Router/Router.php");
+require_once("Router/Router.php");
 Router::content();

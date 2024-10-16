@@ -1,10 +1,5 @@
 <?php
-include './views/controllers/BaseController.php';
-include './views/controllers/ProjectController.php';
-include './views/controllers/ContactController.php';
-include './views/controllers/AboutController.php';
-include './views/Controllers/HomeController.php';
-include './views/Controllers/ErrorController.php';
+include 'Controllers/BaseController.php';
 
 //BEDANKT FLORIS VOOR HULP MET DE ROUTER
 class Router
@@ -13,6 +8,7 @@ class Router
     {   
         $uri = self::processUri(); 
         $class = explode('/', $uri['controller']);
+        require_once $uri['controller'] . '.php';
         if (class_exists($class[2])) {
             $controller = $class[2];
             $method = $uri['method'];
@@ -25,6 +21,7 @@ class Router
                 $controller::{$method}();
             }
         } else {
+            require_once 'Controllers/ErrorController.php';
             ErrorController::redirect('error');
         }
     }
@@ -41,14 +38,12 @@ class Router
         $controller = !empty($cntrluri) ?
             './controllers/' . ucfirst($cntrluri) . 'Controller' :
             './controllers/HomeController';
-        $method = 'redirect';
-        
+        $method = !empty(self::getUri()[2]) ? self::getUri()[2] : 'redirect'; 
         $num_args = count(self::getUri());
         $argsParts = [];
         for ($i = 2; $i < $num_args; $i++) {
             $argsParts[] = self::getUri()[$i];
         }
-
         $args = !empty($argsParts) ?
         $argsParts :[];
 
