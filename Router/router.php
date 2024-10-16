@@ -17,19 +17,16 @@ class Router
         if (class_exists($class[2])) {
             $controller = $class[2];
             $method = $uri['method'];
-            $args = $uri['args'];
-            if (method_exists($controller, $method)) {
-                if (!empty($args)) {
-                    $controller::$method($args);  // Call the method with arguments
-                } else {
-                    $controller::$method();  // Call the method without arguments
-                }
+            // $args = $uri['args'];
+            if (method_exists($controller, $method)) { 
+                    $controller::$method();
+                    $controller::get_content($method);
+                    // trying to figure out how to give the method as a string to the controller
+                    // $controller::$method($args); If statement for when there are arguments rn not necessary
             } else {
-                // If the method doesn't exist, redirect to error page
                 ErrorController::redirect('error');
             }
         } else {
-            require_once 'Controllers/ErrorController.php';
             ErrorController::redirect('error');
         }
     }
