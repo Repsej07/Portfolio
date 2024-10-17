@@ -187,6 +187,7 @@ body {
   cursor: pointer;
   stroke: white;
 }
+/*Home page styling*/
 
 .subtext {
   display: flex;
@@ -248,6 +249,7 @@ body {
   grid-template:
     "block-1  block-2"
     "block-3  block-4"
+    /* "block-6  block-7" */
     "block-5  block-5";
   grid-template-columns: 30%  30%;
   grid-template-rows: 50vh 50vh 50vh;
@@ -258,14 +260,14 @@ justify-content: center;
 
  
 }
-.block-1,.block-2,.block-3,.block-4,.block-5,.contact-block {
+.block-1,.block-2,.block-3,.block-4,.block-5,.block-5 {
   background-repeat: no-repeat;
   background-size: contain;
   width: 20vw;
   height: 20vw;
   transition: 0.5s;
 }
-.block-1:hover,.block-2:hover,.block-3:hover,.block-4:hover,.block-5:hover,.contact-block:hover{
+.block-1:hover,.block-2:hover,.block-3:hover,.block-4:hover,.block-5:hover,.block-5:hover{
 transform: scale(1.1);
 transition: 0.5s;
 cursor: pointer;
@@ -295,7 +297,7 @@ cursor: pointer;
   align-self: end;
 
 }
-.contact-block {
+.block-5 {
   grid-area: block-5;
   display: flex;
   flex-direction: column;
@@ -308,12 +310,12 @@ cursor: pointer;
   align-items: center;
   border: 1px solid #696773;
 }
-.contact-block-item{
+.block-5-item{
   font-size: 4rem;
   color: #696773;
   font-family: panton-trial;
 }
-.contact-block-item-2{
+.block-5-item-2{
   font-size: 2rem;
   color: #696773;
   font-family: panton-trial; 
@@ -326,15 +328,16 @@ cursor: pointer;
   transition: 0.5s;
 
 }
-.contact-block-item-2:hover{
+.block-5-item-2:hover{
   background-color: #696773;
   color: white;
   transition: 0.5s;
   cursor: pointer;
 }
+
+/* project styles*/
 .project-main-container{
 display: grid;
-
 }
 
 .project-sub-image{

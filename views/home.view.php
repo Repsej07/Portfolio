@@ -14,7 +14,6 @@ $Block2 = "views/assets/Jesper/blocks/Project.2.block.png";
 $Block3 = "views/assets/Jesper/blocks/Project.3.block.png";
 $Block4 = "views/assets/Jesper/blocks/Project.4.block.png";
 $Contact = "views/assets/Contact-block.svg";
-//$Block1.href = "/project";
 ?>
 <html>
 
@@ -44,12 +43,12 @@ $Contact = "views/assets/Contact-block.svg";
     <div class="block-grid">
         <div class="block-1" onclick="Link('/project/sony')"style="background-image: url(<?php echo $Block1 ?>);"></div>
         <div class="block-2" onclick="Link('/project/mediamarkt')"style="background-image: url(<?php echo $Block2 ?>);"></div>
-        <div class="block-3" onclick="Link('/project/code')"    style="background-image: url(<?php echo $Block3 ?>)"></div>
-        <div class="block-4" onclick="Link('/project/bmd')"   style="background-image: url(<?php echo $Block4 ?>)"></div>
-        <div class="contact-block" style="background-image:url(<?php echo $Contact ?>)">
-            <p class="contact-block-item">Curious?</p>
+        <div class="block-3" onclick="Link('/project/development')"    style="background-image: url(<?php echo $Block3 ?>)"></div>
+        <div class="block-4" onclick="Link('/project/media')"   style="background-image: url(<?php echo $Block4 ?>)"></div>
+        <div class="block-5" style="background-image:url(<?php echo $Contact ?>)">
+            <p class="block-5-item">Curious?</p>
 
-            <a class="contact-block-item-2" href="/contact">Contact</a>
+            <a class="block-5-item-2" href="/contact">Contact</a>
         </div>
     </div>
 </body>

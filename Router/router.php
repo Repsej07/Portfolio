@@ -20,7 +20,7 @@ class Router
             // $args = $uri['args'];
             if (method_exists($controller, $method)) { 
                     $controller::$method();
-                    $controller::get_content($method);
+                    // $controller::get_content($method); i dont remember why this is here but it is not neccesary
                     // trying to figure out how to give the method as a string to the controller
                     // $controller::$method($args); If statement for when there are arguments rn not necessary
             } else {

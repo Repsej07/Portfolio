@@ -4,11 +4,22 @@ class ProjectController extends BaseController
 {
     public static function sony()
     {
-        $content_array[] = self::get_content('sony');
-        parent::redirect('project', $content_array);
+        self::redirect_content('sony');
     }
-    public static function mediamarkt(){
-        $content_array[] = self::get_content('mediamarkt');
+    public static function mediamarkt()
+    {
+        self::redirect_content('mediamarkt');
+    }
+    public static function development(){
+        self::redirect_content('development');
+    }
+    public static function media(){
+        self::redirect_content('media');
+
+    }
+    public static function redirect_content($method)
+    {
+        $content_array[] = self::get_content($method);
         parent::redirect('project', $content_array);
     }
 
@@ -28,7 +39,6 @@ class ProjectController extends BaseController
             echo "Connection failed: " . $e->getMessage();
         }
     }
-
 }
 
 
