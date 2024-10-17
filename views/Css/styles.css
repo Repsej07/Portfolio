@@ -1,3 +1,4 @@
+/* General styling */
 body {
   margin: 0;
   padding: 0;
@@ -256,9 +257,7 @@ body {
   height: 150vh;
   width: auto;
   padding: 0;
-justify-content: center;
-
- 
+  justify-content: center;
 }
 .block-1,.block-2,.block-3,.block-4,.block-5,.block-5 {
   background-repeat: no-repeat;
@@ -271,31 +270,26 @@ justify-content: center;
 transform: scale(1.1);
 transition: 0.5s;
 cursor: pointer;
-
 }
 .block-1 {
   grid-area: block-1;
   justify-self: center;
   align-self: center;
-
 }
 .block-2 {
   grid-area: block-2;
   justify-self: center;
   align-self: end;
-
 }
 .block-3 {
   grid-area: block-3;
   justify-self: center;
   align-self: center;
-
 }
 .block-4 {
   grid-area: block-4;
   justify-self: center;
   align-self: end;
-
 }
 .block-5 {
   grid-area: block-5;
@@ -326,7 +320,6 @@ cursor: pointer;
   background-color: white;
   border-radius: 45px;
   transition: 0.5s;
-
 }
 .block-5-item-2:hover{
   background-color: #696773;
@@ -373,12 +366,10 @@ width: 80vw;
   padding: 1vh;
   width: 55vw;
   height: auto;
-
 }
 input{
 background-color: transparent;
 border: none;
-
 }
 textarea{
 background-color: transparent;
