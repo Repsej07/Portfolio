@@ -372,3 +372,12 @@ width: 80vw;
   height: auto;
 
 }
+input{
+background-color: transparent;
+border: none;
+
+}
+textarea{
+background-color: transparent;
+border: none;
+}
