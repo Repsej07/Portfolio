@@ -43,13 +43,15 @@ class ProjectController extends BaseController
 
 
 
-// SELECT p.name AS project_name, a.header AS article_header, a.content AS article_content select the name of the project and the header and content of the article and create a alias
-// FROM projects p from where to select
-// JOIN articles a ON p.id = a.project_id inner join the articles table on the id of the project
-// WHERE p.name = :method;" where the name of the project is equal to the method
+// SELECT p.name AS project_name, a.header AS article_header, a.content AS article_content     select the name of the project and the header and content of the article and create a alias
+// FROM projects p     from where to select
+// JOIN articles a ON p.id = a.project_id     inner join the articles with the projects where the id of the project is equal to the project_id of the article
+// WHERE p.name = :method;"    where the name of the project is equal to the method
 
 
 //insert function (not used rn in this code but is used in the db)
 //INSERT INTO articles (project_id, header, content) 
 //VALUES
 //(1, 'The challenges', 'In my Field of work there are a lot of different challenges),
+
+
