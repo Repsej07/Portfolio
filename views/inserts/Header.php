@@ -8,7 +8,7 @@ $last_name = "Meuzelaar";
 
 <head>
     <base href="/">
-    <link rel="stylesheet" href="views/Css/styles.css">
+    <link rel="stylesheet" type="text/css" href="views/Css/styles.css">
     <script src="views/JavaScript/links.js"></script>
     <script src="views/JavaScript/buttons.js"></script>
 

@@ -26,7 +26,7 @@ class ProjectController extends BaseController
     public static function get_content($method)
     {
         try {
-            $db = new PDO("mysql:host=localhost;dbname=Portfolio", 'root', 'Hi123');
+            $db = new PDO("mysql:host=localhost;dbname=test", 'root', 'Hi123');
             $stmt = $db->prepare("SELECT main_image, sub_image,  p.name AS project_name, a.header AS article_header, a.content AS article_content
             FROM projects p
             JOIN articles a ON p.id = a.project_id
