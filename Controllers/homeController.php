@@ -7,7 +7,7 @@ class HomeController
         try {
             $db = new PDO("mysql:host=localhost;dbname=Portfolio", 'root', 'Hi123');
             $stmt = $db->prepare("SELECT p.name AS page_name, c.home_image AS home_image, c.title AS title, c.blocks AS blocks,
-            c.skills AS skills
+            c.skills AS skills, c.title_line AS title_line
             FROM pages p
             JOIN content c ON p.id = c.page_id
             WHERE p.name = 'home'");
