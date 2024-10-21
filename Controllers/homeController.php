@@ -2,7 +2,7 @@
 class HomeController
 {
 
-    public static function get_content()
+    public static function index()
     {
         try {
             $db = new PDO("mysql:host=localhost;dbname=Portfolio", 'root', 'Hi123');
@@ -10,12 +10,10 @@ class HomeController
             c.skills AS skills
             FROM pages p
             JOIN content c ON p.id = c.page_id
-            WHERE p.name = 'home'
-            ");
+            WHERE p.name = 'home'");
             $stmt->execute();
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
             require './views/Home.view.php';
-            return $result;
         } catch (PDOException $e) {
             echo "Connection failed: " . $e->getMessage();
         }

@@ -12,7 +12,6 @@ class Router
     {   
         $uri = self::processUri();
         $class = explode('/', $uri['controller']);
-        // require_once $uri['controller'] . '.php';
         if (class_exists($class[2])) {
             $controller = $class[2];
             $method = $uri['method'];
@@ -20,7 +19,6 @@ class Router
             if (method_exists($controller, $method)) { 
                     $controller::$method();
                     // $controller::get_content($method); i dont remember why this is here but it is not neccesary
-                    // trying to figure out how to give the method as a string to the controller
                     // $controller::$method($args); If statement for when there are arguments rn not necessary
             } else {
                 ErrorController::redirect('error');
@@ -42,7 +40,7 @@ class Router
         $controller = !empty($cntrluri) ?
             './Controllers/' . ucfirst($cntrluri) . 'Controller' :
             './controllers/HomeController';
-        $method = !empty(self::getUri()[2]) ? self::getUri()[2] : 'get_content'; 
+        $method = !empty(self::getUri()[2]) ? self::getUri()[2] : 'index'; 
         // $num_args = count(self::getUri());
         // $argsParts = [];
         // for ($i = 2; $i < $num_args; $i++) {
