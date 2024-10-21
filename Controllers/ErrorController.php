@@ -1,5 +1,5 @@
 <?php
-class ErrorController extends BaseController
+class ErrorController
 {
 public static function redirect($path = 'Error', $args = null)
 {

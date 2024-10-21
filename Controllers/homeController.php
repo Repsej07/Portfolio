@@ -1,7 +1,6 @@
 <?php
-class HomeController extends BaseController
+class HomeController
 {
-    
 
     public static function get_content()
     {
@@ -15,15 +14,16 @@ class HomeController extends BaseController
             ");
             $stmt->execute();
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            print_r($result);
+            require './views/Home.view.php';
             return $result;
         } catch (PDOException $e) {
             echo "Connection failed: " . $e->getMessage();
         }
-        
     }
+
 }
-HomeController::get_content();
+
+
 
     // $home_image = "views/assets/Jesper/Home.main.image.png";
     // $title = "Home";

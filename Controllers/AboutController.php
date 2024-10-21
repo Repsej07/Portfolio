@@ -1,6 +1,6 @@
 <?php
 
-class AboutController extends BaseController
+class AboutController
 {
     public static function redirect($path = 'About', $args = null)
     {

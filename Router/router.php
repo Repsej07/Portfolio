@@ -1,5 +1,4 @@
 <?php
-require_once 'Controllers/BaseController.php';
 require_once 'Controllers/HomeController.php';
 require_once 'Controllers/ErrorController.php';
 require_once 'Controllers/AboutController.php';
@@ -43,7 +42,7 @@ class Router
         $controller = !empty($cntrluri) ?
             './Controllers/' . ucfirst($cntrluri) . 'Controller' :
             './controllers/HomeController';
-        $method = !empty(self::getUri()[2]) ? self::getUri()[2] : 'redirect'; 
+        $method = !empty(self::getUri()[2]) ? self::getUri()[2] : 'get_content'; 
         // $num_args = count(self::getUri());
         // $argsParts = [];
         // for ($i = 2; $i < $num_args; $i++) {

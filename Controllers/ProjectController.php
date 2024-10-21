@@ -1,29 +1,29 @@
 <?php
 
-class ProjectController extends BaseController
+class ProjectController
 {
     public static function sony()
     {
-        self::redirect_content('sony');
+        self::get_content('sony');
     }
     public static function mediamarkt()
     {
-        self::redirect_content('mediamarkt');
+        self::get_content('mediamarkt');
     }
     public static function development(){
-        self::redirect_content('development');
+        self::get_content('development');
     }
     public static function media(){
-        self::redirect_content('media');
+        self::get_content('media');
 
     }
-    public static function redirect_content($method)
-    {
-        $content_array[] = self::get_content($method);
-        parent::redirect('project', $content_array);
-    }
-
     public static function get_content($method)
+    {
+        $content_array[] = self::db_content($method);
+        include "views/project.view.php";
+    }
+
+    public static function db_content($method)
     {
         try {
             $db = new PDO("mysql:host=localhost;dbname=test", 'root', 'Hi123');

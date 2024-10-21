@@ -14,6 +14,7 @@ $Block2 = "views/assets/Jesper/blocks/Project.2.block.png";
 $Block3 = "views/assets/Jesper/blocks/Project.3.block.png";
 $Block4 = "views/assets/Jesper/blocks/Project.4.block.png";
 $Contact = "views/assets/Contact-block.svg";
+print_r($result);
 ?>
 <html>
 
