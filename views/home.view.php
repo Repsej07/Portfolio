@@ -1,7 +1,5 @@
 <?php
 include "./views/inserts/header.php";
-$home_image = $result[0]['home_image'];
-$title = $result[0]['page_name'];
 ?>
 <html>
 
@@ -12,6 +10,7 @@ $title = $result[0]['page_name'];
 <body>
     <div class="home-container">
         <h1 class="title"><?=$result[0]['title_line']?></h1>
+
         <div class="main-image">
             <img class="main-image-img" src="<?=$result[0]['home_image']?>" alt="main-image">
         </div>
@@ -31,14 +30,16 @@ $title = $result[0]['page_name'];
         <?php
         $blocks = explode('|', $result[0]['blocks']);
         foreach ($blocks as $index => $block) {
-            echo"<div class=block-".($index + 1)." ". "style=background-image:url($block)></div>";  
+            $index = $index + 1;
+            echo"<div id='block' class=block-".($index)." "."onclick='test($index)'"."style=background-image:url($block)></div>";  
         }?>
         <div class="block-5" style="background-image:url('views/assets/Contact-block.svg')">
             <p class="block-5-item">Curious?</p>
-
+            <p id="test" class="test" ></p>
             <a class="block-5-item-2" href="/contact">Contact</a>
         </div> 
     </div>
+    <div id="test" class="test" onclick="test()"></div>
 </body>
 <?php
 include "./views/inserts/footer.php"; ?>
