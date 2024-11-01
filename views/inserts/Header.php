@@ -57,7 +57,7 @@ $last_name = "Meuzelaar";
 
     <div class="main-header">
         <div class="backdrop-header"></div>
-        <div class="logo-container" onclick="Link('/')">
+        <div class="logo-container" onclick="link(0)">
             <span class="fName-logo"><?= $first_name ?></span>
             <span class="lName-logo"><?= $last_name ?></span>
         </div>

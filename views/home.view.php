@@ -31,15 +31,13 @@ include "./views/inserts/header.php";
         $blocks = explode('|', $result[0]['blocks']);
         foreach ($blocks as $index => $block) {
             $index = $index + 1;
-            echo"<div id='block' class=block-".($index)." "."onclick='test($index)'"."style=background-image:url($block)></div>";  
+            echo"<div id='block' class=block-".($index)." "."onclick='link($index)'"."style=background-image:url($block)></div>";  
         }?>
         <div class="block-5" style="background-image:url('views/assets/Contact-block.svg')">
             <p class="block-5-item">Curious?</p>
-            <p id="test" class="test" ></p>
             <a class="block-5-item-2" href="/contact">Contact</a>
         </div> 
     </div>
-    <div id="test" class="test" onclick="test()"></div>
 </body>
 <?php
 include "./views/inserts/footer.php"; ?>

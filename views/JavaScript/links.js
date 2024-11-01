@@ -9,8 +9,7 @@ function linkedInlink() {
   window.open("https://www.linkedin.com/in/jesper-meuzelaar/");
 }
 
-function test($index){
-  if (user == "jesper") {
+function link($index){
     
   
   switch ($index) {
@@ -26,8 +25,9 @@ function test($index){
     case 4:
       window.location.href = "/project/bmd";
       break;
+    case 0: 
+    window.location.href = "/"
     default:
       break;
-  }
   }
 }
