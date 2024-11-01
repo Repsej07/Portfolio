@@ -19,12 +19,14 @@ class ContactController
         $mail = $_POST['mail'];
         $message = $_POST['message'];
        
-    $data = [
-        'name' => $name,
-        'mail' => $mail,
-        'message' => $message
-    ];
-    var_dump($data);
+        $db = new PDO("mysql:host=localhost;dbname=Portfolio", 'root', 'Hi123');
+        $stmt = $db->prepare("INSERT INTO contact_form (name, email, message) VALUES (:name, :mail, :message)");
+        $stmt->bindParam(':name', $name);
+        $stmt->bindParam(':mail', $mail);
+        $stmt->bindParam(':message', $message);
+        $stmt->execute();
+        require './views/contact.view.php';
+
     }
 
 }
