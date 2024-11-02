@@ -390,6 +390,8 @@ body {
   background-color: #696773;
   transition: background-color 1s;
   outline: none;
+  caret-color: white;
+  color: white;
 }
 
 .Contact-form {

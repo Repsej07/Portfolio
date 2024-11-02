@@ -4,11 +4,9 @@ require_once 'views/inserts/Header.php';
 
 <form class="Contact-form" action="/contact" method="post">
     <label for="name"><?php 
-    if(isset($nameErr)){
+    echo "First and or Last Name:";
+    if (isset($nameErr)) {
         echo "<script type='text/javascript'>alert('$nameErr');</script>";
-        echo "First and or Last Name:";
-    } else {
-        echo "First and or Last Name:";
     }
     ?></label>
     <input class="contact-input" type="text" name="name" id="name-area" required />
