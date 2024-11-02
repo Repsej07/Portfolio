@@ -6,18 +6,14 @@ class ContactController
     public static function index()
     {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            self::handleFormSubmission();
             $name = $_POST['name'];
             if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
-                $nameErr = "Only letters and white space allowed";
-                echo $nameErr;
-                die();
+                $nameErr = "Please fill in a valid name";
+                require './views/contact.view.php';
+
+              } else {
+                self::handleFormSubmission();
               }
-            $email = ($_POST["mail"]);
-            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-              $emailErr = "Invalid email format";
-              echo $emailErr;
-            }
         } else {
             // Load the contact form view
             require './views/contact.view.php';
@@ -44,3 +40,4 @@ class ContactController
 
 }
 //imma try some form validation because it seems like the form wouldnt be done without it 
+// did it 
