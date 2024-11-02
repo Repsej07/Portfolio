@@ -203,10 +203,11 @@ body {
     ". profile-image ."
     "bar bar bar";
   grid-template-columns: 20% 60% 20%;
-  grid-template-rows: auto auto 100% 100%;
+  grid-template-rows: auto auto auto;
   gap: 20px;
   height: auto;
 }
+
 .title {
   grid-area: title;
   display: flex;
@@ -222,29 +223,40 @@ body {
   grid-area: profile-image;
   margin-bottom: 0;
 }
+
 .main-image-img {
-  width: auto; /* Adjust as necessary */
-  height: 40vw; /* Adjust as necessary */
-  justify-self: center; /* Change from center to end */
-  align-self: center; /* Keep centered vertically */
+  width: auto;
+  height: 40vw;
+  justify-self: center;
+  align-self: center;
 }
 
+/* Skill Bar */
 .skill-bar {
   grid-area: bar;
-  margin-top: 0;
   width: 100vw;
   height: 6vh;
   background-color: #0e0e1e;
-  font-size: 2rem;
-  color: #ffffff66;
-  font-family: panton-trial;
+  overflow: hidden; /* Hide overflow for clean scrolling */
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.skill {
-  padding-left: 90px;
+
+.skill-bar-inner {
+  display: flex;
+  gap: 1em;
+  white-space: nowrap; /* Prevent line break for horizontal scroll */
+  transition: transform 0.1s ease; /* Smooth scroll effect */
 }
+
+.skill {
+  color: #ffffff66;
+  font-size: 2rem;
+  font-family: panton-trial;
+  padding: 0 40px; /* Adjust spacing as needed */
+}
+
 .block-grid {
   display: grid;
   grid-template:
@@ -331,7 +343,7 @@ body {
   border-radius: 45px;
   transition: background-color 0.5s;
 }
-.block-5-item-2:hover {
+.block-5-item-2:hover{
   background-color: #696773;
   color: white;
   transition: background-color 0.5s;
