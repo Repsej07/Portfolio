@@ -4,6 +4,8 @@ require_once 'Controllers/ErrorController.php';
 require_once 'Controllers/AboutController.php';
 require_once 'Controllers/ContactController.php';
 require_once 'Controllers/ProjectController.php';
+require_once 'Controllers/LoginController.php';
+require_once 'Controllers/AdminController.php';
 
 //BEDANKT FLORIS VOOR HULP MET DE ROUTER
 class Router
