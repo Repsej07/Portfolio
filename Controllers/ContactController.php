@@ -26,7 +26,7 @@ class ContactController
         $mail = $_POST['mail'];
         $message = $_POST['message'];
        
-        $db = new PDO("mysql:host=localhost;dbname=Portfolio", 'root', 'Hi123');
+        $db = new PDO("mysql:host=localhost;dbname=jesper_portfolio", 'root', 'Hi123');
         $stmt = $db->prepare("INSERT INTO contact_form (name, email, message) VALUES (:name, :mail, :message)");
         $stmt->bindParam(':name', $name);
         $stmt->bindParam(':mail', $mail);

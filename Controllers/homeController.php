@@ -5,7 +5,7 @@ class HomeController
     public static function index()
     {
         try {
-            $db = new PDO("mysql:host=localhost;dbname=Portfolio", 'root', 'Hi123');
+            $db = new PDO("mysql:host=localhost;dbname=jesper_portfolio", 'root', 'Hi123');
             $stmt = $db->prepare("SELECT p.name AS page_name, c.home_image AS home_image, c.title AS title, c.blocks AS blocks,
             c.skills AS skills, c.title_line AS title_line
             FROM pages p
