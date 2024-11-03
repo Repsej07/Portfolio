@@ -7,8 +7,8 @@
 <body>
      <form action="/Login" method="post">
      	<h2>LOGIN</h2>
-     	<?php if (isset($_GET['error'])) { ?>
-     		<p class="error"><?php echo $_GET['error']; ?></p>
+     	<?php if (isset($error)) { ?>
+     		<p class="error"><?php echo $error; ?></p>
      	<?php } ?>
      	<label>User Name</label>
      	<input type="text" name="uname" placeholder="User Name"><br>
