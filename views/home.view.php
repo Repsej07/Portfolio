@@ -19,9 +19,12 @@ include "./views/inserts/header.php";
 
                 <?php
                 $skills = explode('|', $result[0]['skills']);
-                foreach ($skills as $skill) {
-                    echo "<span class='skill'>" . htmlspecialchars($skill) . "</span>";
+                for ($i=0; $i < 2; $i++) { 
+                    foreach ($skills as $skill) {
+                        echo "<span class='skill'>" . htmlspecialchars($skill) . "</span>";
+                    }
                 }
+                
                 ?>
             </div>
         </div>
@@ -49,6 +52,9 @@ include "./views/inserts/header.php";
         });
     </script>
     <!-- with help of gpt i have achieved the scroll effect for the skillsbar -->
+    <!-- in a recent conversation with an AI assistant, it was suggested to implement a horizontal scrolling
+      effect for a skill bar using JavaScript and CSS to create a visually appealing user experience
+      (Assistant, personal communication, November 3, 2024). -->
 
 </body>
 <?php
