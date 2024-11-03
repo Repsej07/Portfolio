@@ -19,12 +19,9 @@ class LoginController
             $data = htmlspecialchars($data);
             return $data;
         }
-
         $uname = validate($_POST['uname']);
         $pass = validate($_POST['password']);
-        // Assuming you already have a PDO connection established as $pdo
         try {
-            // Prepare the SQL statement 
             $db = new PDO("mysql:host=localhost;dbname=jesper_portfolio", 'root', 'Hi123');
             $sql = "SELECT * FROM users WHERE user_name = '$uname' AND password = '$pass'";
             $stmt = $db->prepare($sql);
@@ -49,8 +46,7 @@ class LoginController
             } else {
                 $error = "Invalid username or password";
                 include './views/login.view.php';                
-                // header("location: /login");
-            }
+                }
         } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
         }

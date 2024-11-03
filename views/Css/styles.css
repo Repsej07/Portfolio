@@ -438,3 +438,38 @@ body {
   transition: background-color 1s;
   cursor: pointer;
 }
+
+.login-form{
+  display: flex;
+font-family: panton-trial;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+width: 100vw;
+color: white;
+
+}
+.login-input{
+height: 6vh;
+width: 20vw;
+}
+.login-button{
+
+    background-color: white;
+    color: #696773;
+    width: 20vw;
+    font-size: 1rem;
+    font-family: panton-trial;
+    border: none;
+    padding: 1vh;
+    margin-top: 1vh;
+    transition: background-color 1s;
+  
+}
+.login-button:hover{
+  background-color:  #696773;
+  color: white;
+  transition: background-color 1s;
+  cursor: pointer;
+
+}

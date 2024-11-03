@@ -1,22 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>LOGIN</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
+<?php
+include "./views/inserts/header.php";
+?>
 <body>
-     <form action="/Login" method="post">
-     	<h2>LOGIN</h2>
+     <form class="login-form" action="/Login" method="post">
+     	<h2>Login</h2>
      	<?php if (isset($error)) { ?>
      		<p class="error"><?php echo $error; ?></p>
      	<?php } ?>
-     	<label>User Name</label>
-     	<input type="text" name="uname" placeholder="User Name"><br>
+     	<label class="label-login">User Name</label>
+     	<input class="login-input" type="text" name="uname" placeholder="User Name"><br>
 
-     	<label>Password</label>
-     	<input type="password" name="password" placeholder="Password"><br>
+     	<label class="label-login">Password</label>
+     	<input class="login-input"type="password" name="password" placeholder="Password"><br>
 
-     	<button type="submit">Login</button>
+     	<button class="login-button" type="submit">Login</button>
      </form>
 </body>
 </html>
+<?php
+include "./views/inserts/footer.php"; ?>

@@ -4,6 +4,8 @@ class HomeController
 
     public static function index()
     {
+        session_start();
+        session_destroy();
         try {
             $db = new PDO("mysql:host=localhost;dbname=jesper_portfolio", 'root', 'Hi123');
             $stmt = $db->prepare("SELECT p.name AS page_name, c.home_image AS home_image, c.title AS title, c.blocks AS blocks,
