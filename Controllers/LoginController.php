@@ -1,28 +1,40 @@
 <?php
 class LoginController
 {
-
+    // Main method to handle login requests
     public static function index()
     {
+        // Check if the request method is POST
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            // Call the login system method
             self::loginsystem();
         } else {
+            // Load the login view
             require './views/login.view.php';
         }
     }
-    public static function  loginsystem()
+
+    // Method to handle the login system
+    public static function loginsystem()
     {
+        // Function to validate input data
         function validate($data)
         {
-            $data = trim($data);
-            $data = stripslashes($data);
-            $data = htmlspecialchars($data);
+            $data = trim($data); // Remove whitespace from both sides
+            $data = stripslashes($data); // Remove backslashes
+            $data = htmlspecialchars($data); // Convert special characters to HTML entities
             return $data;
         }
+
+        // Validate username and password from POST request
         $uname = validate($_POST['uname']);
         $pass = validate($_POST['password']);
+
         try {
+            // Connect to the database
             $db = new PDO("mysql:host=localhost;dbname=jesper_portfolio", 'root', 'Hi123');
+
+            // Prepare SQL query to check user credentials
             $sql = "SELECT * FROM users WHERE user_name = '$uname' AND password = '$pass'";
             $stmt = $db->prepare($sql);
             $stmt->execute();
@@ -40,14 +52,16 @@ class LoginController
                     $_SESSION['id'] = $row['id'];
 
                     // Redirect to home page
-                    header( "location: /admin");
+                    header("location: /admin");
                     exit();
                 }
             } else {
+                // If credentials are invalid, show error message
                 $error = "Invalid username or password";
-                include './views/login.view.php';                
-                }
+                include './views/login.view.php';
+            }
         } catch (PDOException $e) {
+            // Handle database connection errors
             echo "Error: " . $e->getMessage();
         }
     }
