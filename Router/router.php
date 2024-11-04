@@ -23,10 +23,10 @@ class Router
                     // $controller::get_content($method); i dont remember why this is here but it is not neccesary
                     // $controller::$method($args); If statement for when there are arguments rn not necessary
             } else {
-                ErrorController::redirect('error');
+                ErrorController::index();
             }
         } else {
-            ErrorController::redirect('error');
+            ErrorController::index();
         }
     }
 

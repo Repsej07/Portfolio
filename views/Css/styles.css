@@ -7,20 +7,17 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url(/views/assets/backdrop.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: url(/views/assets/backdrop.png) no-repeat center center/cover;
   background-color: #010114;
   overflow-x: hidden;
-  font-family: Internal font;
+  font-family: "Internal font";
 }
 
 /* Header styling */
 .main-header {
   display: grid;
   grid-template-areas: "logo menu";
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 100%;
+  grid-template-columns: 1fr 1fr;
   width: 100%;
   height: 8rem;
 }
@@ -31,44 +28,42 @@ body {
   justify-self: flex-start;
   padding-left: 1rem;
   margin: 0;
-  transition: 0.1s;
+  transition: transform 0.2s;
   z-index: 1;
+  cursor: pointer;
 }
 
 .logo-container:hover {
   transform: scale(1.1);
-  transition: 0.2s;
-  cursor: pointer;
+}
+
+.fName-logo,
+.lName-logo {
+  font-size: 30px;
+  font-weight: 700;
 }
 
 .fName-logo {
   color: #009fb7;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 700;
 }
 
 .lName-logo {
   color: #696773;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 700;
 }
 
 .menu {
   grid-area: menu;
   justify-self: flex-end;
   align-self: center;
-  transition: 0.1s;
   padding-right: 1rem;
   position: fixed;
   z-index: 1;
+  transition: transform 0.2s;
+  cursor: pointer;
 }
 
 .menu:hover {
   transform: scale(1.2);
-  transition: 0.2s;
-  cursor: pointer;
 }
 
 /* Footer styling */
@@ -78,7 +73,7 @@ body {
   grid-template-areas:
     ". icons ."
     ". copyright .";
-  grid-template-rows: 50% 50%;
+  grid-template-rows: 1fr 1fr;
   grid-template-columns: 42.5% 15% 42.5%;
   padding-top: 1rem;
 }
@@ -98,31 +93,25 @@ body {
   padding-top: 1rem;
 }
 
-.cr1 {
-  font-style: normal;
-}
-
 .icon {
   padding-left: 0.3rem;
-  transition: 0.3s;
+  transition: transform 0.5s;
+  cursor: pointer;
 }
 
 .icon:hover {
   transform: scale(1.1);
-  transition: 0.5s;
-  cursor: pointer;
 }
 
 /* Overlay styling */
 .overlay {
   width: 100%;
-  height: 0px;
+  height: 0;
   transition: height 0.5s;
   z-index: 1;
   overflow-x: hidden;
   position: fixed;
-  background-image: url(/views/assets/custom-backdrop.png);
-  background-size: cover;
+  background: url(/views/assets/custom-backdrop.png) no-repeat center center/cover;
 }
 
 /* Navigation bar styling */
@@ -135,60 +124,37 @@ body {
     "about about"
     "contact contact"
     "links links";
-  grid-template-columns: 75% 25%;
-  grid-template-rows: 25% 25% 25% 15%;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 4rem;
 }
 
-.nav-item-1 {
-  grid-area: portfolio;
+.nav-item {
   align-self: center;
   justify-self: center;
-  transition: transform 0.3s;
-  display: flex;
-  color: #6e6e79;
   text-decoration: none;
-}
-
-.nav-item-1:hover {
-  transform: scale(1.1);
+  color: #6e6e79;
   transition: transform 0.5s;
   cursor: pointer;
+}
+
+.nav-item:hover {
+  transform: scale(1.1);
   color: white;
+}
+
+.nav-item-1 {
+  grid-area: portfolio;
 }
 
 .nav-item-2 {
   grid-area: about;
-  align-self: center;
-  justify-self: center;
-  text-decoration: none;
-  color: #6e6e79;
-  transition: transform 0.3s;
-}
-
-.nav-item-2:hover {
-  transform: scale(1.1);
-  transition: transform 0.5s;
-  cursor: pointer;
-  color: white;
 }
 
 .nav-item-3 {
   grid-area: contact;
-  align-self: center;
-  justify-self: center;
-  text-decoration: none;
-  color: #6e6e79;
-  transition: transform 0.3s;
-}
-
-.nav-item-3:hover {
-  transform: scale(1.1);
-  transition: transform 0.5s;
-  cursor: pointer;
-  color: white;
 }
 
 .icons-header {
@@ -199,15 +165,13 @@ body {
 
 .icon-header {
   padding-left: 1rem;
-  transition: transform 0.3s;
+  transition: transform 0.5s;
   stroke: #6e6e79;
+  cursor: pointer;
 }
 
 .icon-header:hover {
   transform: scale(1.1);
-  transition: transform 0.5s;
-  transform-origin: center;
-  cursor: pointer;
   stroke: white;
 }
 
@@ -220,14 +184,12 @@ body {
 
 .home-container {
   display: grid;
-  grid-template:
+  grid-template-areas:
     "title title title"
     ". profile-image ."
     "bar bar bar";
-  grid-template-columns: 20% 60% 20%;
-  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr 3fr 1fr;
   gap: 20px;
-  height: auto;
 }
 
 .title {
@@ -258,63 +220,48 @@ body {
   width: 100vw;
   height: 6vh;
   background-color: #0e0e1e;
-  overflow: hidden; /* Hide overflow for clean scrolling */
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .skill-bar-inner {
   display: flex;
   gap: 1em;
-  white-space: nowrap; /* Prevent line break for horizontal scroll */
-  transition: transform 0.1s ease; /* Smooth scroll effect */
+  white-space: nowrap;
+  transition: transform 0.1s ease;
 }
 
 .skill {
   color: #ffffff66;
   font-size: 2rem;
-  padding: 0 40px; /* Adjust spacing as needed */
+  padding: 0 40px;
 }
 
 /* Block grid styling */
 .block-grid {
   display: grid;
-  grid-template:
-    "block-1  block-2"
-    "block-3  block-4"
-    /* "block-6  block-7" */
-    "block-5  block-5";
-  grid-template-columns: 30% 30%;
-  grid-template-rows: 50vh 50vh 50vh;
-  height: 150vh;
-  width: auto;
-  padding: 0;
+  grid-template-areas:
+    "block-1 block-2"
+    "block-3 block-4"
+    "block-5 block-5";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 50vh);
   justify-content: center;
 }
 
-.block-1,
-.block-2,
-.block-3,
-.block-4,
-.block-5,
-.block-5 {
+.block {
   background-repeat: no-repeat;
   background-size: contain;
   width: 20vw;
   height: 20vw;
   transition: transform 0.5s;
+  cursor: pointer;
 }
 
-.block-1:hover,
-.block-2:hover,
-.block-3:hover,
-.block-4:hover,
-.block-5:hover,
-.block-5:hover {
+.block:hover {
   transform: scale(1.1);
-  transition: transform 0.5s;
-  cursor: pointer;
 }
 
 .block-1 {
@@ -364,19 +311,16 @@ body {
   font-size: 2rem;
   color: #696773;
   text-decoration: none;
-  padding: 10px;
-  padding-right: 100px;
-  padding-left: 100px;
+  padding: 10px 100px;
   background-color: white;
   border-radius: 45px;
   transition: background-color 0.5s;
+  cursor: pointer;
 }
 
 .block-5-item-2:hover {
   background-color: #696773;
   color: white;
-  transition: background-color 0.5s;
-  cursor: pointer;
 }
 
 /* Project styles */
@@ -384,9 +328,13 @@ body {
   display: grid;
 }
 
-.project-sub-image {
+.project-sub-image,
+.project-main-image {
   justify-self: center;
   align-content: center;
+}
+
+.project-sub-image {
   height: 30vh;
   width: 80vw;
 }
@@ -394,29 +342,24 @@ body {
 .project-main-image {
   height: 60vh;
   width: 55vw;
+}
+
+.header-project,
+.article-project {
   justify-self: center;
   align-content: center;
+  padding: 1vh;
+  width: 55vw;
+  color: white;
 }
 
 .header-project {
-  height: auto;
-  width: 55vw;
-  color: white;
   font-size: 2rem;
-  justify-self: center;
-  align-content: center;
-  padding: 1vh;
 }
 
 .article-project {
-  color: white;
   word-wrap: break-word;
   font-size: 1rem;
-  justify-self: center;
-  align-content: center;
-  padding: 1vh;
-  width: 55vw;
-  height: auto;
 }
 
 /* Contact form styling */
@@ -424,15 +367,13 @@ body {
   width: 50vw;
   background-color: white;
   font-size: 1rem;
-  justify-self: center;
   resize: none;
   border: none;
-  transition: background-color 0.5s;
+  transition: background-color 1s;
 }
 
 .contact-input:focus {
   background-color: #696773;
-  transition: background-color 1s;
   outline: none;
   caret-color: white;
   color: white;
@@ -462,19 +403,17 @@ body {
   margin-top: 1vh;
   transition: background-color 1s;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .contact-button:hover {
   background-color: #696773;
   color: white;
-  transition: background-color 1s;
-  cursor: pointer;
 }
 
 /* Login form styling */
 .login-form {
   display: flex;
-  font-family: panton-trial;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -496,13 +435,12 @@ body {
   padding: 1vh;
   margin-top: 1vh;
   transition: background-color 1s;
+  cursor: pointer;
 }
 
 .login-button:hover {
   background-color: #696773;
   color: white;
-  transition: background-color 1s;
-  cursor: pointer;
 }
 
 /* Dropdown styling */
@@ -524,8 +462,6 @@ body {
 .dropdown {
   position: relative;
   display: inline-block;
-  justify-self: center;
-  align-self: center;
 }
 
 .dropdown-content {
@@ -560,18 +496,16 @@ body {
 /* About page styling */
 .main-about-container {
   display: grid;
-  grid-template:
+  grid-template-areas:
     "title title"
     "image main-content";
-  grid-template-columns: 50% 50%;
-  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr;
 }
 
 .about-main-image {
   grid-area: image;
   justify-self: center;
   align-self: center;
-  height: auto;
   width: 50vh;
 }
 
@@ -580,12 +514,11 @@ body {
   justify-self: center;
   align-self: center;
   color: white;
-  opacity: 70%;
+  opacity: 0.7;
   word-wrap: break-word;
   font-size: 1.5rem;
   padding: 1vh;
   width: 50vw;
-  height: auto;
 }
 
 .about-title {
