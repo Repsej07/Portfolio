@@ -88,10 +88,13 @@ body {
   justify-content: center;
   padding-top: 1rem;
 }
+<<<<<<< HEAD
 .cr1 {
   font-style: normal;
 }
 
+=======
+>>>>>>> parent of 5090616 (Added comments)
 .cr1 {
   font-style: normal;
 }
@@ -149,9 +152,12 @@ body {
   color: white;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> parent of eb4277a (Simplififed)
+=======
+>>>>>>> parent of 5090616 (Added comments)
 .nav-item-2 {
   grid-area: about;
   align-self: center;
@@ -161,9 +167,12 @@ body {
   transition: transform 0.3s;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> parent of eb4277a (Simplififed)
+=======
+>>>>>>> parent of 5090616 (Added comments)
 .nav-item-2:hover {
   transform: scale(1.1);
   transition: transform 0.5s;
@@ -171,9 +180,12 @@ body {
   color: white;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> parent of eb4277a (Simplififed)
+=======
+>>>>>>> parent of 5090616 (Added comments)
 .nav-item-3 {
   grid-area: contact;
   align-self: center;
@@ -183,9 +195,12 @@ body {
   transition: transform 0.3s;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> parent of eb4277a (Simplififed)
+=======
+>>>>>>> parent of 5090616 (Added comments)
 .nav-item-3:hover {
   transform: scale(1.1);
   transition: transform 0.5s;
@@ -292,9 +307,12 @@ body {
   justify-content: center;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> parent of eb4277a (Simplififed)
+=======
+>>>>>>> parent of 5090616 (Added comments)
 .block-1,
 .block-2,
 .block-3,
@@ -320,7 +338,6 @@ body {
 }
 =======
 }
-
 .block-1:hover,
 .block-2:hover,
 .block-3:hover,
@@ -331,8 +348,11 @@ body {
   transition: transform 0.5s;
   cursor: pointer;
 }
+<<<<<<< HEAD
 
 >>>>>>> parent of eb4277a (Simplififed)
+=======
+>>>>>>> parent of 5090616 (Added comments)
 .block-1 {
   grid-area: block-1;
   justify-self: center;
@@ -392,16 +412,19 @@ body {
 /* project styles*/
 =======
 }
-
-.block-5-item-2:hover {
+.block-5-item-2:hover{
   background-color: #696773;
   color: white;
   transition: background-color 0.5s;
   cursor: pointer;
 }
 
+<<<<<<< HEAD
 /* Project styles */
 >>>>>>> parent of eb4277a (Simplififed)
+=======
+/* project styles*/
+>>>>>>> parent of 5090616 (Added comments)
 .project-main-container {
   display: grid;
 }
@@ -419,9 +442,12 @@ body {
   align-content: center;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> parent of eb4277a (Simplififed)
+=======
+>>>>>>> parent of 5090616 (Added comments)
 .header-project {
   height: auto;
   width: 55vw;
@@ -432,9 +458,12 @@ body {
   padding: 1vh;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> parent of eb4277a (Simplififed)
+=======
+>>>>>>> parent of 5090616 (Added comments)
 .article-project {
   color: white;
   word-wrap: break-word;
@@ -446,10 +475,13 @@ body {
   height: auto;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 /* Contact form styling */
 >>>>>>> parent of eb4277a (Simplififed)
+=======
+>>>>>>> parent of 5090616 (Added comments)
 .contact-input {
   width: 50vw;
   background-color: white;
@@ -502,21 +534,17 @@ body {
   cursor: pointer;
 }
 
-/* Login form styling */
-.login-form {
+.login-form{
   display: flex;
-  font-family: panton-trial;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 100vw;
-  color: white;
-}
+font-family: panton-trial;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+width: 100vw;
+color: white;
 
-.login-input {
-  height: 6vh;
-  width: 20vw;
 }
+<<<<<<< HEAD
 
 .login-button {
   background-color: white;
@@ -528,18 +556,39 @@ body {
   margin-top: 1vh;
 >>>>>>> parent of eb4277a (Simplififed)
   transition: background-color 1s;
+=======
+.login-input{
+height: 6vh;
+width: 20vw;
+>>>>>>> parent of 5090616 (Added comments)
 }
+.login-button{
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .login-form{
 =======
 .login-button:hover {
   background-color: #696773;
+=======
+    background-color: white;
+    color: #696773;
+    width: 20vw;
+    font-size: 1rem;
+    border: none;
+    padding: 1vh;
+    margin-top: 1vh;
+    transition: background-color 1s;
+  
+}
+.login-button:hover{
+  background-color:  #696773;
+>>>>>>> parent of 5090616 (Added comments)
   color: white;
   transition: background-color 1s;
   cursor: pointer;
-}
 
+<<<<<<< HEAD
 /* Dropdown styling */
 .dropdown-container {
 >>>>>>> parent of eb4277a (Simplififed)
@@ -582,6 +631,16 @@ align-items: center;
 padding: 50px;
 
 }
+=======
+}
+.dropdown-container{
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 50px;
+
+}
+>>>>>>> parent of 5090616 (Added comments)
 .dropbtn {
   background-color: #696773;
   color: white;
@@ -596,9 +655,13 @@ padding: 50px;
   justify-self: center;
   align-self: center;
 <<<<<<< HEAD
+<<<<<<< HEAD
   
 =======
 >>>>>>> parent of eb4277a (Simplififed)
+=======
+  
+>>>>>>> parent of 5090616 (Added comments)
 }
 
 .dropdown-content {
@@ -621,6 +684,7 @@ padding: 50px;
 .dropdown:hover .dropdown-content {display: block;}
 
 .dropdown:hover .dropbtn {background-color: #f1f1f1; color:#696773} 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 /* About page styling */
@@ -662,5 +726,7 @@ padding: 50px;
   font-size: 2rem;
   color: #6e6e79;
 }
+=======
+>>>>>>> parent of 5090616 (Added comments)
 =======
 >>>>>>> parent of 5090616 (Added comments)
