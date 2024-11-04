@@ -510,6 +510,7 @@ padding: 50px;
 .dropdown:hover .dropdown-content {display: block;}
 
 .dropdown:hover .dropbtn {background-color: #f1f1f1; color:#696773} 
+<<<<<<< HEAD
 
 /* About page styling */
 .main-about-container {
@@ -547,3 +548,5 @@ padding: 50px;
   font-size: 2rem;
   color: #6e6e79;
 }
+=======
+>>>>>>> parent of 5090616 (Added comments)
