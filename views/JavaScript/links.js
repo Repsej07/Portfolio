@@ -1,4 +1,3 @@
-user = "jesper";
 function gitHublink() {
   window.open("https://github.com/Repsej07");
 }
