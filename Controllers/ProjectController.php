@@ -10,10 +10,10 @@ class ProjectController
     {
         self::get_content('mediamarkt');
     }
-    public static function development(){
-        self::get_content('development');
+    public static function code(){
+        self::get_content('code');
     }
-    public static function media(){
+    public static function bmd(){
         self::get_content('media');
 
     }

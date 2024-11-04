@@ -1,11 +1,9 @@
 /* General styling */
 @font-face {
-  font-family: "test";
+  font-family: "Internal font";
   src: url(./Fonts/Roboto-Bold.ttf);
 }
-*{
-  font-family: test;
-}
+
 body {
   margin: 0;
   padding: 0;
@@ -14,6 +12,7 @@ body {
   background-repeat: no-repeat;
   background-color: #010114;
   overflow-x: hidden;
+  font-family: Internal font;
 }
 
 .main-header {
@@ -413,6 +412,7 @@ body {
 
 .Contact-form * {
   padding: 1vh;
+  border-radius: 10px;
 }
 
 .contact-button {
@@ -424,6 +424,7 @@ body {
   padding: 1vh;
   margin-top: 1vh;
   transition: background-color 1s;
+  border-radius: 10px;
 }
 
 .contact-button:hover {
@@ -453,7 +454,6 @@ width: 20vw;
     color: #696773;
     width: 20vw;
     font-size: 1rem;
-    font-family: ;
     border: none;
     padding: 1vh;
     margin-top: 1vh;
