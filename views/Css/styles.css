@@ -92,6 +92,10 @@ body {
   font-style: normal;
 }
 
+.cr1 {
+  font-style: normal;
+}
+
 .icon {
   padding-left: 0.3rem;
   transition: 0.3s;
@@ -144,6 +148,10 @@ body {
   cursor: pointer;
   color: white;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of eb4277a (Simplififed)
 .nav-item-2 {
   grid-area: about;
   align-self: center;
@@ -152,12 +160,20 @@ body {
   color: #6e6e79;
   transition: transform 0.3s;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of eb4277a (Simplififed)
 .nav-item-2:hover {
   transform: scale(1.1);
   transition: transform 0.5s;
   cursor: pointer;
   color: white;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of eb4277a (Simplififed)
 .nav-item-3 {
   grid-area: contact;
   align-self: center;
@@ -166,6 +182,10 @@ body {
   color: #6e6e79;
   transition: transform 0.3s;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of eb4277a (Simplififed)
 .nav-item-3:hover {
   transform: scale(1.1);
   transition: transform 0.5s;
@@ -271,6 +291,10 @@ body {
   padding: 0;
   justify-content: center;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of eb4277a (Simplififed)
 .block-1,
 .block-2,
 .block-3,
@@ -282,6 +306,7 @@ body {
   width: 20vw;
   height: 20vw;
   transition: transform 0.5s;
+<<<<<<< HEAD
 }
 .block-1:hover,
 .block-2:hover,
@@ -293,6 +318,21 @@ body {
   transition: transform 0.5s;
   cursor: pointer;
 }
+=======
+}
+
+.block-1:hover,
+.block-2:hover,
+.block-3:hover,
+.block-4:hover,
+.block-5:hover,
+.block-5:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+
+>>>>>>> parent of eb4277a (Simplififed)
 .block-1 {
   grid-area: block-1;
   justify-self: center;
@@ -340,6 +380,7 @@ body {
   background-color: white;
   border-radius: 45px;
   transition: background-color 0.5s;
+<<<<<<< HEAD
 }
 .block-5-item-2:hover{
   background-color: #696773;
@@ -349,6 +390,18 @@ body {
 }
 
 /* project styles*/
+=======
+}
+
+.block-5-item-2:hover {
+  background-color: #696773;
+  color: white;
+  transition: background-color 0.5s;
+  cursor: pointer;
+}
+
+/* Project styles */
+>>>>>>> parent of eb4277a (Simplififed)
 .project-main-container {
   display: grid;
 }
@@ -365,6 +418,10 @@ body {
   justify-self: center;
   align-content: center;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of eb4277a (Simplififed)
 .header-project {
   height: auto;
   width: 55vw;
@@ -374,6 +431,10 @@ body {
   align-content: center;
   padding: 1vh;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of eb4277a (Simplififed)
 .article-project {
   color: white;
   word-wrap: break-word;
@@ -384,6 +445,11 @@ body {
   width: 55vw;
   height: auto;
 }
+<<<<<<< HEAD
+=======
+
+/* Contact form styling */
+>>>>>>> parent of eb4277a (Simplififed)
 .contact-input {
   width: 50vw;
   background-color: white;
@@ -430,11 +496,53 @@ body {
 .contact-button:hover {
   background-color:  #696773;
   color: white;
+<<<<<<< HEAD
+=======
   transition: background-color 1s;
   cursor: pointer;
 }
 
+/* Login form styling */
+.login-form {
+  display: flex;
+  font-family: panton-trial;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  color: white;
+}
+
+.login-input {
+  height: 6vh;
+  width: 20vw;
+}
+
+.login-button {
+  background-color: white;
+  color: #696773;
+  width: 20vw;
+  font-size: 1rem;
+  border: none;
+  padding: 1vh;
+  margin-top: 1vh;
+>>>>>>> parent of eb4277a (Simplififed)
+  transition: background-color 1s;
+}
+
+<<<<<<< HEAD
 .login-form{
+=======
+.login-button:hover {
+  background-color: #696773;
+  color: white;
+  transition: background-color 1s;
+  cursor: pointer;
+}
+
+/* Dropdown styling */
+.dropdown-container {
+>>>>>>> parent of eb4277a (Simplififed)
   display: flex;
 font-family: panton-trial;
 align-items: center;
@@ -487,7 +595,10 @@ padding: 50px;
   display: inline-block;
   justify-self: center;
   align-self: center;
+<<<<<<< HEAD
   
+=======
+>>>>>>> parent of eb4277a (Simplififed)
 }
 
 .dropdown-content {
@@ -515,16 +626,18 @@ padding: 50px;
 /* About page styling */
 .main-about-container {
   display: grid;
-  grid-template-areas:
+  grid-template:
     "title title"
     "image main-content";
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto;
 }
 
 .about-main-image {
   grid-area: image;
   justify-self: center;
   align-self: center;
+  height: auto;
   width: 50vh;
 }
 
@@ -533,11 +646,12 @@ padding: 50px;
   justify-self: center;
   align-self: center;
   color: white;
-  opacity: 0.7;
+  opacity: 70%;
   word-wrap: break-word;
   font-size: 1.5rem;
   padding: 1vh;
   width: 50vw;
+  height: auto;
 }
 
 .about-title {
