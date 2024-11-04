@@ -1,32 +1,32 @@
 <?php
 
-class ProjectController extends BaseController
+class ProjectController
 {
     public static function sony()
     {
-        self::redirect_content('sony');
+        self::get_content('sony');
     }
     public static function mediamarkt()
     {
-        self::redirect_content('mediamarkt');
+        self::get_content('mediamarkt');
     }
-    public static function development(){
-        self::redirect_content('development');
+    public static function code(){
+        self::get_content('code');
     }
-    public static function media(){
-        self::redirect_content('media');
+    public static function bmd(){
+        self::get_content('bmd');
 
     }
-    public static function redirect_content($method)
-    {
-        $content_array[] = self::get_content($method);
-        parent::redirect('project', $content_array);
-    }
-
     public static function get_content($method)
     {
+        $content_array[] = self::db_content($method);
+        include "views/project.view.php";
+    }
+
+    public static function db_content($method)
+    {
         try {
-            $db = new PDO("mysql:host=localhost;dbname=Portfolio", 'root', 'Hi123');
+            $db = new PDO("mysql:host=localhost;dbname=jesper_portfolio", 'root', 'Hi123');
             $stmt = $db->prepare("SELECT main_image, sub_image,  p.name AS project_name, a.header AS article_header, a.content AS article_content
             FROM projects p
             JOIN articles a ON p.id = a.project_id
