@@ -14,7 +14,7 @@ class ProjectController
         self::get_content('code');
     }
     public static function bmd(){
-        self::get_content('media');
+        self::get_content('bmd');
 
     }
     public static function get_content($method)

@@ -14,7 +14,7 @@ class HomeController
             JOIN content c ON p.id = c.page_id
             WHERE p.name = 'home'");
             $stmt->execute();
-            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $content_array = $stmt->fetchAll(PDO::FETCH_ASSOC);
             require './views/Home.view.php';
         } catch (PDOException $e) {
             echo "Connection failed: " . $e->getMessage();
