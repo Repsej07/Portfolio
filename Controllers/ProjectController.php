@@ -49,9 +49,5 @@ class ProjectController
 // WHERE p.name = :method;"    where the name of the project is equal to the method
 
 
-//insert function (not used rn in this code but is used in the db)
-//INSERT INTO articles (project_id, header, content) 
-//VALUES
-//(1, 'The challenges', 'In my Field of work there are a lot of different challenges),
 
 

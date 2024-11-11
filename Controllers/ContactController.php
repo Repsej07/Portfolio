@@ -39,5 +39,3 @@ class ContactController
     }
 
 }
-//imma try some form validation because it seems like the form wouldnt be done without it 
-// did it 
