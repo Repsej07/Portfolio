@@ -39,8 +39,5 @@ class ContactController
     }
 
 }
-<<<<<<< HEAD
 //imma try some form validation because it seems like the form wouldnt be done without it 
 // did it 
-=======
->>>>>>> 6b97e084bcb4c77a00e82fabec0b782ad0fb261c
