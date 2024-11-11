@@ -5,7 +5,7 @@ include("views/inserts/Header.php");
 
 
 <head>
-    <title>Project</title>
+    <title><?=$content_array[0][0]['project_name']?></title>
 </head>
 <div class="project-main-container">  
 <img class="project-sub-image" src="<?=$content_array[0][0]['sub_image']?>">
