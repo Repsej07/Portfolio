@@ -9,7 +9,11 @@ include("views/inserts/Header.php");
 </head>
 <div class="project-main-container">  
 <img class="project-sub-image" src="<?=$content_array[0][0]['sub_image']?>">
-<img class="project-main-image" src="<?=$content_array[0][0]['main_image']?>"> 
+<?php
+if (!empty($content_array[0][0]['main_image'])) {
+    echo "<img class='project-main-image' src='".$content_array[0][0]['main_image']."'>";
+}
+?>
 <?php
 
 

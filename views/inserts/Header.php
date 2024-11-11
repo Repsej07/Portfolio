@@ -8,7 +8,7 @@ $last_name = "Meuzelaar";
 
 <head>
     <base href="/">
-    <link rel="stylesheet" href="views/Css/styles.css">
+    <link rel="stylesheet" type="text/css" href="views/Css/styles.css">
     <script src="views/JavaScript/links.js"></script>
     <script src="views/JavaScript/buttons.js"></script>
 
@@ -57,7 +57,7 @@ $last_name = "Meuzelaar";
 
     <div class="main-header">
         <div class="backdrop-header"></div>
-        <div class="logo-container" onclick="Link('/')">
+        <div class="logo-container" onclick="link(0)">
             <span class="fName-logo"><?= $first_name ?></span>
             <span class="lName-logo"><?= $last_name ?></span>
         </div>
