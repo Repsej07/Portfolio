@@ -595,3 +595,12 @@ body {
   font-size: 2rem;
   color: #6e6e79;
 }
+
+.admin-textarea{
+display: flex;
+font-size: 1rem;
+justify-self: center;
+resize: none;
+border: none;
+font-family: Internal font;
+}
